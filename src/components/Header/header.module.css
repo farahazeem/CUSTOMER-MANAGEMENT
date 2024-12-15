@@ -1,0 +1,26 @@
+.header {
+    color: var(--primary-blue);
+    background-color: white;
+    padding: 0;
+    border-bottom: 1px solid var(--primary-blue);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+ ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+ul a {
+    padding: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-blue)
+}
