@@ -23,7 +23,7 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .list_item img {
     width: 4rem;
     height: 4rem;
@@ -56,3 +56,40 @@ button {
     cursor: pointer;
     color: var(--primary-blue);
   }
+
+@media screen and (max-width: 768px) {
+  .list_item {
+    grid-template-columns: 
+      minmax(4rem, 5rem) /* Image */
+      minmax(8rem, 12rem) /* Name */
+      minmax(8rem, 12rem) /* Email */
+      minmax(4rem, 8rem)  /* Role */
+      minmax(5rem, 8rem); /* Actions */
+    font-size: 1rem;
+  }
+
+  .list_item img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .list_item {
+    grid-template-columns: 1fr 1fr;
+    font-size: 1rem;
+  }
+
+  .employee_acion {
+    justify-content: space-around;
+  }
+
+  .list_item img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .list {
+    margin: 0.5rem;
+  }
+}
