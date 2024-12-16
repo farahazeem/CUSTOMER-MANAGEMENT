@@ -5,6 +5,7 @@ import { Employee } from "../../models/employee.model";
 import Input from "../../components/Input/Input";
 import { saveEmployee } from "../../utils/employee.utils";
 import { useAuth } from "../../hooks/useAuth";
+import { toast } from "react-toastify";
 
 export interface EmployeeFormRef {
   openModal: () => void;
@@ -42,8 +43,9 @@ const AddEmployee = forwardRef<EmployeeFormRef, EmployeeFormProps>(
         onAddEmployee(employeeWithId);
         setModalState(false);
         reset();
-      } catch (error) {
-        console.log("Something went wrong, please try again.", error);
+        toast.success("Employee added successfully");
+      } catch (error: any) {
+        toast.error(error?.response?.data);
       }
     };
     return (
